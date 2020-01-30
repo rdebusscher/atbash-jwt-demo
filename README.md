@@ -57,6 +57,16 @@ An example for writing keys can be found in the classes
 - Elliptic Curve keys : `be.atbash.demo.jwt.keys.SaveECPEM`
 - Edwards-curve keys : `be.atbash.demo.jwt.keys.SaveOKPPEM`
 
+## Writing to Java KeyStore
+
+The Java Keystore has a Java specific format (JKS) and a more generic format, PKCS#12. This format requires encoding of the private keys and the store as a whole. By default the format is PKCS#12.  
+Storing public keys are done as a X.509 Certificate.
+ 
+An example for writing keys can be found in the classes
+
+- RSA keys : `be.atbash.demo.jwt.keys.SaveRSAKeyStore`
+- EC keys : `be.atbash.demo.jwt.keys.SaveECKeyStore`
+
 ## Reading JWK File
 
 The framework support reading the cryptographic keys which are stored in the JWK format.
@@ -83,6 +93,11 @@ An example for reading keys (PKCS #8 encoded private keys or public keys) can be
 - RSA keys : `be.atbash.demo.jwt.keys.ReadRSAPEM`
 - Elliptic Curve keys : `be.atbash.demo.jwt.keys.ReadECPEM`
 - Edwards-curve keys : `be.atbash.demo.jwt.keys.ReadOKPPEM`
+
+## Reading Java KeyStore files
+
+- RSA keys : `be.atbash.demo.jwt.keys.ReadRSAKeyStore`
+- EC keys : `be.atbash.demo.jwt.keys.ReadECKeyStore`
 
 # Advanced
 
